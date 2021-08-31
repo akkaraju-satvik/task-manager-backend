@@ -11,7 +11,7 @@ router.post('/tasks/', auth, async function(req, res) {
 
     try {
         await task.save()
-        res.status(200).send(task)
+        res.status(201).send(task)
     } catch(error) {
         res.status(400).send(error)
     }
